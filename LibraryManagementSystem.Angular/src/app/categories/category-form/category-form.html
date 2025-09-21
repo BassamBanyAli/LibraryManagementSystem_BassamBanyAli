@@ -1,0 +1,25 @@
+<div class="category-form-container">
+  <mat-card class="category-form-card">
+    <mat-card-title class="form-title">
+      {{ categoryId ? 'Edit Category' : 'Add Category' }}
+    </mat-card-title>
+
+    <form [formGroup]="categoryForm" (ngSubmit)="saveCategory()" class="category-form">
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+
+      <div class="form-actions">
+        <button mat-raised-button color="primary" type="submit">
+          {{ categoryId ? 'Update' : 'Save' }}
+        </button>
+        <button mat-raised-button color="warn" type="button" (click)="cancel()">
+          Cancel
+        </button>
+      </div>
+
+    </form>
+  </mat-card>
+</div>

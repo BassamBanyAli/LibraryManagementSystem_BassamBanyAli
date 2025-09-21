@@ -1,0 +1,35 @@
+<div class="book-list-container">
+
+
+  <div class="book-list-box">
+
+
+    <div *ngIf="!books?.length && !loading" class="empty-state">
+      <mat-icon class="empty-icon" color="primary">menu_book</mat-icon>
+      <p class="empty-text">No books loaded yet.</p>
+      <button mat-raised-button color="primary" (click)="loadBooks()">
+        Load Books With Categories
+      </button>
+    </div>
+
+ 
+    <div *ngIf="loading" class="loading-text">Loading...</div>
+    <div *ngIf="error" class="error-text">{{ error }}</div>
+
+
+    <div *ngIf="books?.length" class="books-grid">
+      <mat-card *ngFor="let book of books" class="book-card">
+        <mat-card-title>{{ book.title }}</mat-card-title>
+        <mat-card-subtitle>
+          Author: {{ book.author || 'N/A' }} | ISBN: {{ book.isbn || 'N/A' }}
+        </mat-card-subtitle>
+        <mat-card-content>
+          Published At: {{ book.publishedAt | date:'short' }} <br>
+          Categories: {{ book.categories || 'None' }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </div>
+
+</div>

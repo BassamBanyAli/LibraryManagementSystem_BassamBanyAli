@@ -1,0 +1,48 @@
+/* Center the card on the page */
+.form-container {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  min-height: 100vh;       /* full viewport height */
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* Card styling */
+.book-form-card {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;/* light blue, change to any color you like */
+}
+
+/* Title styling */
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Form fields full width with spacing */
+.book-form .full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Horizontal buttons aligned to right */
+.form-actions {
+  display: flex;
+  justify-content: flex-end; /* align buttons to the right */
+  gap: 10px;                 /* space between buttons */
+  margin-top: 20px;
+}
+
+/* Optional: Hover effect for buttons */
+.form-actions button:hover {
+  transform: translateY(-2px);
+  transition: 0.2s;
+}

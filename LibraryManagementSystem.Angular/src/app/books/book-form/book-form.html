@@ -1,0 +1,43 @@
+<div class="form-container">
+  <mat-card class="book-form-card">
+    <mat-card-title class="form-title">{{ bookId ? 'Edit Book' : 'Add Book' }}</mat-card-title>
+
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="book-form">
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Author</mat-label>
+        <input matInput formControlName="author">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>ISBN</mat-label>
+        <input matInput formControlName="isbn">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Categories</mat-label>
+        <mat-select formControlName="categoryIds" multiple>
+          <mat-option *ngFor="let category of categories" [value]="category.id">
+            {{ category.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Horizontal Buttons -->
+      <div class="form-actions">
+        <button mat-raised-button color="primary" type="submit">
+          {{ bookId ? 'Update' : 'Save' }}
+        </button>
+        <button mat-raised-button color="warn" type="button" (click)="cancel()">
+          Cancel
+        </button>
+      </div>
+
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,40 @@
+/* app-toolbar styling */
+.app-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-weight: 500;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Center nav buttons */
+.toolbar-center button {
+  margin: 0 10px;
+  font-size: 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.toolbar-center button.active {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 4px;
+}
+
+/* Hover effect for nav buttons */
+.toolbar-center button:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Right side buttons */
+.toolbar-right button {
+  color: white;
+}
+
+/* Spacer not needed now because flex handles it */
