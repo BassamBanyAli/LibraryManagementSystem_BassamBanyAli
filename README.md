@@ -22,6 +22,7 @@ Open src/environments/environment.ts and update the apiUrl with the backend URL
 6-ng serve --open
 
 Time estimation : 4 days
+
 actual time spent: 4 days
 
 Challenges Faced
